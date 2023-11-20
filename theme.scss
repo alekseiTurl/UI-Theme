@@ -1,0 +1,27 @@
+@mixin lightVariables {
+  --main-bg-color: var(--color-grey);
+  --title-color: var(--color-black);
+  --text-color: var(--color-black);
+  --btn-switch-color: var(--color-black);
+  --btn-switch-position: -100%
+
+}
+@mixin darkVariables {
+  --main-bg-color: var(--color-black);
+  --title-color: var(--color-green);
+  --text-color: var(--color-white);
+  --btn-switch-color: var(--color-white);
+  --btn-switch-position: 0
+}
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #808080;
+  --color-green: #00ff00;
+}
+html.dark-theme {
+  @include darkVariables;
+}
+html.light-theme {
+  @include lightVariables;
+}

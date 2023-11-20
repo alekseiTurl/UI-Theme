@@ -1,0 +1,53 @@
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #808080;
+    --color-green: #0f0;
+}
+html.dark-theme {
+    --main-bg-color: var(--color-black);
+    --title-color: var(--color-green);
+    --text-color: var(--color-white);
+    --btn-switch-color: var(--color-white);
+    --btn-switch-position: -100%;
+
+}
+html.light-theme {
+    --main-bg-color: var(--color-grey);
+    --title-color: var(--color-black);
+    --text-color: var(--color-black);
+    --btn-switch-color: var(--color-black);
+    --btn-switch-position: 0;
+}
+body {
+    background-color: var(--main-bg-color);
+    transition: all 0.3s;
+}
+h1 {
+    color: var(--title-color);
+    transition: all 0.3s;
+}
+p {
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+.switch-theme-btn {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--btn-switch-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.switch-theme-btn__bullet {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transform: translateY(-50%) translateX(var(--btn-switch-position));
+    background-color: var(--btn-switch-color);
+    transition: all 0.3s;
+}
